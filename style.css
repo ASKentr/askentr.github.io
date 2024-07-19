@@ -1,16 +1,17 @@
 ﻿body {
-    background-color: #131313;
+    background-color: #2b2d31;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
 .header {
     font-weight: normal;
-    font-size: 42px;
+    font-size: 36px;
     color: azure;
     text-align: center;
-    background-color: #423f3f;
-    border: 1px solid aquamarine;
-}
+    background-color: #1e1f22;
+    border: 1px solid #d1d7d6;
+    border-radius: 10px;
+    }
 
 .about {
     font-weight: 300;
@@ -22,5 +23,6 @@
 .img {
     float: right;
     margin: 7px 7px 7px 7px;
+    border-radius: 10px;
 }
 

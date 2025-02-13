@@ -1,28 +1,178 @@
-﻿body {
-    background-color: #2b2d31;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
+﻿/* Основные стили */
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9; /* Светлый фон */
+    color: #333; /* Тёмный текст */
+    line-height: 1.6;
+    position: relative;
 }
 
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    position: relative;
+    z-index: 1;
+}
+
+/* Шапка */
 .header {
-    font-weight: normal;
-    font-size: 36px;
-    color: azure;
+    background-color: #2c3e50; /* Тёмно-синий фон шапки */
+    color: #fff;
+    padding: 40px 0;
     text-align: center;
-    background-color: #1e1f22;
-    border: 1px solid #d1d7d6;
-    border-radius: 10px;
-    }
+    position: relative;
+    z-index: 1;
+}
 
+.header h1 {
+    margin: 0;
+    font-size: 2.5rem;
+}
+
+.header p {
+    margin: 10px 0 0;
+    font-size: 1.2rem;
+}
+
+/* Оглавление */
+.toc {
+    margin-top: 20px;
+}
+
+.toc ul {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.toc ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 0.9rem;
+    padding: 5px 10px;
+    border-radius: 5px;
+    background-color: rgba(255, 255, 255, 0.1);
+    transition: background-color 0.3s;
+}
+
+.toc ul li a:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+/* Основной контент */
 .about {
-    font-weight: 300;
-    font-size: 20px;
-    color: #99b9b7;
-    text-align: left;
+    background-color: #fff;
+    margin: 20px 0;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    position: relative;
+    z-index: 1;
 }
 
-.img {
-    float: right;
-    margin: 7px 7px 7px 7px;
-    border-radius: 10px;
+.about h2 {
+    color: #2c3e50; /* Тёмно-синий цвет заголовков */
+    margin-top: 0;
+    margin-bottom: 20px;
 }
 
+.profile-content {
+    display: flex;
+    align-items: flex-start;
+    gap: 20px;
+}
+
+.profile {
+    flex: 1;
+    max-width: 200px;
+}
+
+.profile-img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+.content {
+    flex: 3;
+}
+
+.about ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.about ul li {
+    margin: 10px 0;
+}
+
+.about a {
+    color: #3498db; /* Синий цвет ссылок */
+    text-decoration: none;
+}
+
+.about a:hover {
+    text-decoration: underline;
+}
+
+/* Подвал */
+.footer {
+    background-color: #2c3e50; /* Тёмно-синий фон подвала */
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+    margin-top: 40px;
+    position: relative;
+    z-index: 1;
+}
+
+.footer p {
+    margin: 0;
+}
+
+/* Ссылка на GitHub */
+.github-link {
+    display: inline-block;
+    background-color: #2c3e50; /* Синий фон кнопки */
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    margin-top: 10px;
+    transition: background-color 0.3s;
+}
+
+.github-link:hover {
+    background-color: #2c6e8f; /* Тёмно-синий при наведении */
+}
+
+/* Кнопка "Наверх" */
+.back-to-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #3498db; /* Синий фон кнопки */
+    color: #fff;
+    padding: 10px 15px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 1rem;
+    display: none; /* Скрыта по умолчанию */
+    z-index: 1000;
+    transition: background-color 0.3s;
+}
+
+.back-to-top:hover {
+    background-color: #2980b9; /* Тёмно-синий при наведении */
+}
+
+.back-to-top.visible {
+    display: block; /* Показываем кнопку при прокрутке */
+}

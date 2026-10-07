@@ -46,8 +46,15 @@
 <body>
 <a class="skip-link" href="#main">К содержанию</a>
 <div class="scroll-progress" aria-hidden="true"></div>
-<div class="cursor-glow" aria-hidden="true"></div>
-<div class="cursor-ring" aria-hidden="true"></div>
+<div class="page-bg" aria-hidden="true">
+    <span class="aurora aurora--1"></span>
+    <span class="aurora aurora--2"></span>
+    <span class="aurora aurora--3"></span>
+    <span class="aurora aurora--4"></span>
+    <span class="dots"></span>
+    <span class="dots dots--lit"></span>
+    <span class="noise"></span>
+</div>
 
 <header class="header">
     <div class="container header__inner">
@@ -77,18 +84,12 @@
 <main id="main">
     <!-- Первый экран -->
     <section class="hero" id="top">
-        <div class="hero__bg" aria-hidden="true">
-            <span class="blob blob--1"></span>
-            <span class="blob blob--2"></span>
-            <span class="blob blob--3"></span>
-            <span class="grid-lines"></span>
-        </div>
         <div class="container hero__inner">
             <div class="hero__text">
                 <p class="badge reveal"><span class="badge__dot"></span>Открыт к интересным предложениям</p>
                 <h1 class="hero__title reveal">
                     Внедряю ИИ<br>
-                    <span class="gradient-text">в&nbsp;<span class="rotator">работу команд</span></span>
+                    <span class="gradient-text">в</span>&nbsp;<span class="rotator gradient-text">работу команд</span>
                 </h1>
                 <p class="hero__lead reveal">
                     Ринат Абдулов, специалист по внедрению ИИ и обучению.
@@ -107,7 +108,7 @@
                 <div class="photo-frame tilt">
                     <picture>
                         <source srcset="images/portrait.webp" type="image/webp">
-                        <img src="images/portrait.jpg" width="640" height="800" alt="Ринат Абдулов">
+                        <img src="images/portrait.jpg" width="720" height="720" alt="Ринат Абдулов">
                     </picture>
                 </div>
                 <div class="float-card float-card--a">

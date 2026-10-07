@@ -118,55 +118,46 @@
     const words = ['работу команд', 'редакции', 'обучение', 'процессы', 'медиа'];
     if (rotator && !reducedMotion) {
         let i = 0;
-        setInterval(() => {
+        const OUT = 900, IN = 1100, PAUSE = 2200;
+        const next = () => {
+            rotator.classList.remove('is-in');
             rotator.classList.add('is-out');
             setTimeout(() => {
                 i = (i + 1) % words.length;
                 rotator.textContent = words[i];
                 rotator.classList.remove('is-out');
-            }, 400);
-        }, 2800);
+                rotator.classList.add('is-in');
+                setTimeout(next, IN + PAUSE);
+            }, OUT);
+        };
+        setTimeout(next, PAUSE + 800);
     }
 
     if (reducedMotion || !finePointer) return;
 
-    // ---------- Курсор: кольцо и мягкое свечение ----------
-    const ring = document.querySelector('.cursor-ring');
-    const glow = document.querySelector('.cursor-glow');
-    const mouse = { x: window.innerWidth / 2, y: window.innerHeight / 2 };
-    const ringPos = { ...mouse };
-    const glowPos = { ...mouse };
-    let ringScale = 1;
-    const interactive = 'a, button, .chips li';
+    // ---------- Подсветка сетки точек вокруг курсора ----------
+    const pageBg = document.querySelector('.page-bg');
+    const mouse = { x: -999, y: -999 };
+    const lit = { x: -999, y: -999 };
 
     window.addEventListener('pointermove', (e) => {
         mouse.x = e.clientX;
         mouse.y = e.clientY;
         if (!root.classList.contains('has-cursor')) {
-            ringPos.x = glowPos.x = mouse.x;
-            ringPos.y = glowPos.y = mouse.y;
+            lit.x = mouse.x;
+            lit.y = mouse.y;
             root.classList.add('has-cursor');
         }
     }, { passive: true });
-
-    document.addEventListener('pointerover', (e) => {
-        ring.classList.toggle('is-hover', !!e.target.closest(interactive));
-    });
-    document.addEventListener('pointerdown', () => ring.classList.add('is-down'));
-    document.addEventListener('pointerup', () => ring.classList.remove('is-down'));
     document.addEventListener('mouseleave', () => root.classList.remove('has-cursor'));
 
     const loop = () => {
-        ringPos.x += (mouse.x - ringPos.x) * 0.2;
-        ringPos.y += (mouse.y - ringPos.y) * 0.2;
-        glowPos.x += (mouse.x - glowPos.x) * 0.07;
-        glowPos.y += (mouse.y - glowPos.y) * 0.07;
-        ringScale += ((ring.classList.contains('is-hover') ? 1.6 : 1) - ringScale) * 0.15;
-        ring.style.transform = `translate3d(${ringPos.x}px, ${ringPos.y}px, 0) scale(${ringScale})`;
-        glow.style.transform = `translate3d(${glowPos.x}px, ${glowPos.y}px, 0)`;
+        lit.x += (mouse.x - lit.x) * 0.12;
+        lit.y += (mouse.y - lit.y) * 0.12;
+        pageBg.style.setProperty('--cx', lit.x.toFixed(1) + 'px');
+        pageBg.style.setProperty('--cy', lit.y.toFixed(1) + 'px');
         requestAnimationFrame(loop);
     };
-    ring.style.transition = 'opacity 0.3s, border-width 0.2s';
     requestAnimationFrame(loop);
 
     // ---------- Подсветка карточек под курсором ----------

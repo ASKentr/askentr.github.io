@@ -743,6 +743,7 @@ p { margin: 0; }
 }
 .timeline__date {
     padding-top: 1px;
+    padding-right: 28px;
     color: var(--muted);
     font-size: 0.92rem;
     font-weight: 700;

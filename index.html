@@ -3,113 +3,392 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <title>Rinat "ASKentr" Abdulov</title>
-    <link rel="stylesheet" type="text/css" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <title>Ринат Абдулов — внедрение ИИ и обучение</title>
+    <meta name="description" content="Специалист по внедрению ИИ и обучению. Обучаю сотрудников и руководителей работе с нейросетями, пишу правила безопасного использования ИИ и автоматизирую рутину.">
+    <meta name="theme-color" content="#5b5bf0">
+
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://askentr.github.io/">
+    <meta property="og:title" content="Ринат Абдулов — внедрение ИИ и обучение">
+    <meta property="og:description" content="Помогаю командам встроить нейросети в ежедневную работу: обучение, правила безопасной работы с ИИ, автоматизация.">
+    <meta property="og:image" content="https://askentr.github.io/images/og.jpg">
+    <meta property="og:locale" content="ru_RU">
+    <meta name="twitter:card" content="summary_large_image">
+
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0' stop-color='%235b5bf0'/%3E%3Cstop offset='1' stop-color='%2314b8a6'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='64' height='64' rx='16' fill='url(%23g)'/%3E%3Ctext x='32' y='42' font-family='Arial' font-weight='700' font-size='26' text-anchor='middle' fill='white'%3E%D0%A0%D0%90%3C/text%3E%3C/svg%3E">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+
+    <script>
+        // Тема применяется до отрисовки, чтобы не было вспышки
+        document.documentElement.classList.add('js');
+        try {
+            const saved = localStorage.getItem('theme');
+            if (saved) document.documentElement.dataset.theme = saved;
+        } catch (e) {}
+    </script>
+
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Ринат Абдулов",
+        "jobTitle": "Специалист по внедрению ИИ и обучению",
+        "url": "https://askentr.github.io/",
+        "email": "mailto:askentr@gmail.com",
+        "sameAs": ["https://github.com/ASKentr", "https://t.me/ASKentr"]
+    }
+    </script>
 </head>
 <body>
+<a class="skip-link" href="#main">К содержанию</a>
+<div class="scroll-progress" aria-hidden="true"></div>
+<div class="cursor-glow" aria-hidden="true"></div>
+<div class="cursor-ring" aria-hidden="true"></div>
+
 <header class="header">
-    <div class="container">
-        <h1>Ринат Абдулов / ASKentr</h1>
-        <p>Эксперт в обучении, аналитик, разработчик-любитель, автор</p>
-        <nav class="toc">
-            <ul>
-                <li><a href="#skills">Мой опыт и навыки</a></li>
-                <li><a href="#about">Обо мне</a></li>
-                <li><a href="#courses">Курсы</a></li>
-                <li><a href="#projects">Мои проекты</a></li>
-                <li><a href="#contacts">Контакты</a></li>
-            </ul>
+    <div class="container header__inner">
+        <a href="#top" class="logo" aria-label="Наверх">
+            <span class="logo__mark">РА</span>
+            <span class="logo__text">Ринат Абдулов</span>
+        </a>
+        <nav class="nav" id="nav" aria-label="Разделы">
+            <a href="#services">Чем занимаюсь</a>
+            <a href="#projects">Проекты</a>
+            <a href="#experience">Опыт</a>
+            <a href="#education">Обучение</a>
+            <a href="#contacts">Контакты</a>
         </nav>
+        <div class="header__actions">
+            <button class="icon-btn theme-toggle" type="button" aria-label="Сменить тему">
+                <svg class="icon-sun" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/></svg>
+                <svg class="icon-moon" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+            </button>
+            <button class="icon-btn menu-toggle" type="button" aria-label="Меню" aria-expanded="false" aria-controls="nav">
+                <span></span><span></span>
+            </button>
+        </div>
     </div>
 </header>
 
-<main class="container">
-    <section class="about" id="skills">
-        <h2>Мой опыт и навыки</h2>
-        <div class="profile-content">
-            <div class="profile">
-                <img src="images/IMG_3166.jpeg" alt="Фото Рината Абдулова" class="profile-img">
+<main id="main">
+    <!-- Первый экран -->
+    <section class="hero" id="top">
+        <div class="hero__bg" aria-hidden="true">
+            <span class="blob blob--1"></span>
+            <span class="blob blob--2"></span>
+            <span class="blob blob--3"></span>
+            <span class="grid-lines"></span>
+        </div>
+        <div class="container hero__inner">
+            <div class="hero__text">
+                <p class="badge reveal"><span class="badge__dot"></span>Открыт к интересным предложениям</p>
+                <h1 class="hero__title reveal">
+                    Внедряю ИИ<br>
+                    <span class="gradient-text">в&nbsp;<span class="rotator">работу команд</span></span>
+                </h1>
+                <p class="hero__lead reveal">
+                    Ринат Абдулов, специалист по внедрению ИИ и обучению.
+                    Помогаю сотрудникам и руководителям встроить нейросети в ежедневную работу:
+                    обучаю, пишу правила безопасного использования ИИ и автоматизирую рутину.
+                </p>
+                <div class="hero__cta reveal">
+                    <a class="btn btn--primary magnetic" href="https://t.me/ASKentr" target="_blank" rel="noopener">
+                        Написать в Telegram
+                        <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+                    </a>
+                    <a class="btn btn--ghost magnetic" href="https://hh.ru/resume/75c9e748ff113522f00039ed1f586769555068" target="_blank" rel="noopener">Резюме на hh.ru</a>
+                </div>
             </div>
-            <div class="content">
-                <ul>
-                    <li><strong>Эксперт</strong> в области обучения персонала (опыт более 5-ти лет);</li>
-                    <li><strong>Аналитик</strong>, занимающийся сбором и систематизацией данных (в основном с помощью Excel/Google-таблиц);</li>
-                    <li><strong>Разработчик-любитель</strong>, люблю технологические решения задач, заинтересован в своём IT-развитии;</li>
-                    <li><strong>Автор...?</strong></li>
+            <div class="hero__photo reveal">
+                <div class="photo-frame tilt">
+                    <picture>
+                        <source srcset="images/portrait.webp" type="image/webp">
+                        <img src="images/portrait.jpg" width="640" height="800" alt="Ринат Абдулов">
+                    </picture>
+                </div>
+                <div class="float-card float-card--a">
+                    <span class="float-card__icon">✦</span>
+                    <span>Генеративный ИИ</span>
+                </div>
+                <div class="float-card float-card--b">
+                    <span class="float-card__icon">⚙</span>
+                    <span>Автоматизация</span>
+                </div>
+            </div>
+        </div>
+        <a href="#stats" class="scroll-hint" aria-label="Листать вниз"><span></span></a>
+    </section>
+
+    <!-- Цифры -->
+    <section class="stats" id="stats" aria-label="Коротко в цифрах">
+        <div class="container stats__grid">
+            <div class="stat reveal">
+                <div class="stat__num"><span class="counter" data-to="400">400</span>+</div>
+                <p>сотрудников медиахолдинга обучил работе с ИИ</p>
+            </div>
+            <div class="stat reveal">
+                <div class="stat__num"><span class="counter" data-to="6">6</span>+</div>
+                <p>лет в обучении персонала</p>
+            </div>
+            <div class="stat reveal">
+                <div class="stat__num"><span class="counter" data-to="240">240</span>+</div>
+                <p>обучающих мероприятий по IT-продуктам</p>
+            </div>
+            <div class="stat reveal">
+                <div class="stat__num"><span class="counter" data-to="4">4</span></div>
+                <p>модуля корпоративной программы по ИИ</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Компетенции -->
+    <section class="section" id="services">
+        <div class="container">
+            <div class="section__head reveal">
+                <p class="eyebrow">Чем занимаюсь</p>
+                <h2>От первого промпта до&nbsp;встроенного процесса</h2>
+            </div>
+            <div class="cards cards--4">
+                <article class="card spotlight reveal">
+                    <div class="card__icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l2.2 5.3L20 9l-4.4 3.8L17 18.5 12 15.6 7 18.5l1.4-5.7L4 9l5.8-.7z"/></svg>
+                    </div>
+                    <h3>Внедрение ИИ</h3>
+                    <p>Разбираю задачи команды, подбираю инструменты и сценарии, перевожу возможности нейросетей на язык конкретной работы.</p>
+                </article>
+                <article class="card spotlight reveal">
+                    <div class="card__icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M2 7l10-4 10 4-10 4z"/><path d="M6 9v5c0 1.7 2.7 3 6 3s6-1.3 6-3V9"/><path d="M22 7v6"/></svg>
+                    </div>
+                    <h3>Программы обучения</h3>
+                    <p>Проектирую и веду программы от базового промптинга до работы с данными и медиаконтентом: очные занятия, дистанционные курсы, тесты.</p>
+                </article>
+                <article class="card spotlight reveal">
+                    <div class="card__icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l8 3v6c0 4.5-3.4 8.3-8 9-4.6-.7-8-4.5-8-9V6z"/><path d="M9 12l2 2 4-4"/></svg>
+                    </div>
+                    <h3>Безопасная работа с ИИ</h3>
+                    <p>Правила для редакции и руководителей: конфиденциальность, персональные данные, фактчекинг, маркировка ИИ-контента.</p>
+                </article>
+                <article class="card spotlight reveal">
+                    <div class="card__icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M8 6l-6 6 6 6M16 6l6 6-6 6M14 4l-4 16"/></svg>
+                    </div>
+                    <h3>Автоматизация и ТЗ</h3>
+                    <p>Инструменты на Python с ИИ-ассистентом, подключения к Telegram и Discord, требования и технические задания для разработчиков.</p>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- Проекты -->
+    <section class="section section--alt" id="projects">
+        <div class="container">
+            <div class="section__head reveal">
+                <p class="eyebrow">Проекты</p>
+                <h2>Задача → решение → результат</h2>
+            </div>
+
+            <div class="cases">
+                <article class="case case--wide spotlight reveal">
+                    <div class="case__meta"><span class="tag">МИЦ «Известия»</span><span class="tag tag--soft">с 2024</span></div>
+                    <h3>Программа ИИ-грамотности для медиахолдинга</h3>
+                    <dl class="case__steps">
+                        <div><dt>Задача</dt><dd>У сотрудников не было понимания, как использовать ИИ в производстве новостей и какой контент создавать с нейросетями.</dd></div>
+                        <div><dt>Решение</dt><dd>Программа из модулей под разные аудитории: базовый, продвинутый промптинг и работа с данными, медиапроизводство (изображения, видео, озвучка), отдельный модуль для руководителей о рисках, праве и внедрении. Перед запуском новые модули проверяет фокус-группа руководителей.</dd></div>
+                        <div><dt>Результат</dt><dd>Более 400 сотрудников редакции и руководители прошли обучение; следующие модули строятся по запросам участников.</dd></div>
+                    </dl>
+                </article>
+
+                <article class="case spotlight reveal">
+                    <div class="case__meta"><span class="tag">Python</span><span class="tag tag--soft">автоматизация</span></div>
+                    <h3>Автоматизация цикла обучения</h3>
+                    <dl class="case__steps">
+                        <div><dt>Задача</dt><dd>Запись, посещаемость, рассылка материалов и отчёты отнимали много ручной работы.</dd></div>
+                        <div><dt>Решение</dt><dd>Локальные инструменты, собранные с ИИ-ассистентом: отметка посещаемости, письмо с материалами, дашборд для руководства. ТЗ на чат-бот записи на обучение.</dd></div>
+                        <div><dt>Результат</dt><dd>Ручной работы стало в разы меньше, персональные данные не покидают рабочий компьютер.</dd></div>
+                    </dl>
+                </article>
+
+                <article class="case spotlight reveal">
+                    <div class="case__meta"><span class="tag">Хакатон ЛЦТ 2026</span><span class="tag tag--soft">медицина</span></div>
+                    <h3>Densito AI</h3>
+                    <dl class="case__steps">
+                        <div><dt>Задача</dt><dd>Задача Департамента здравоохранения Москвы: ИИ-сервис оценки качества денситометрических исследований.</dd></div>
+                        <div><dt>Решение</dt><dd>В команде из двух человек: классификация снимков нейросетью (CNN), веб-интерфейс, Docker, CI и автотесты.</dd></div>
+                        <div><dt>Результат</dt><dd>Рабочий прототип в открытом репозитории.</dd></div>
+                    </dl>
+                    <a class="case__link" href="https://github.com/ASKentr/densito-ai" target="_blank" rel="noopener">Репозиторий на GitHub <span aria-hidden="true">↗</span></a>
+                </article>
+
+                <article class="case spotlight reveal">
+                    <div class="case__meta"><span class="tag">ИИ-агенты</span><span class="tag tag--soft">знания</span></div>
+                    <h3>База знаний, которую ведёт ИИ</h3>
+                    <dl class="case__steps">
+                        <div><dt>Задача</dt><dd>Материалы программ, исследования и заметки разбросаны по файлам и быстро устаревают.</dd></div>
+                        <div><dt>Решение</dt><dd>База в Obsidian, которую ведёт ИИ-агент: разбирает входящие материалы, раскладывает их по темам, ведёт индекс и журнал изменений. Навыки и MCP-подключения.</dd></div>
+                        <div><dt>Результат</dt><dd>Презентации и учебные материалы готовлю в разы быстрее.</dd></div>
+                    </dl>
+                </article>
+
+                <article class="case spotlight reveal">
+                    <div class="case__meta"><span class="tag">ИИ-агенты</span><span class="tag tag--soft">медиа</span></div>
+                    <h3>Мониторинг Telegram-каналов</h3>
+                    <dl class="case__steps">
+                        <div><dt>Задача</dt><dd>Следить за десятками каналов и не пропускать значимые новости.</dd></div>
+                        <div><dt>Решение</dt><dd>ИИ-агент обходит каналы, оценивает публикации по заданным критериям и собирает дайджест.</dd></div>
+                        <div><dt>Результат</dt><dd>Вместо ленты из сотен сообщений — короткая подборка главного.</dd></div>
+                    </dl>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- Опыт -->
+    <section class="section" id="experience">
+        <div class="container">
+            <div class="section__head reveal">
+                <p class="eyebrow">Опыт</p>
+                <h2>Где я работал</h2>
+            </div>
+            <ol class="timeline">
+                <li class="timeline__item reveal">
+                    <div class="timeline__date">окт. 2024 — сейчас</div>
+                    <div class="timeline__body">
+                        <h3>МИЦ «Известия»</h3>
+                        <p class="timeline__role">Специалист по обучению: ИИ и IT-системы</p>
+                        <ul>
+                            <li>Разработал и веду программу обучения работе с генеративным ИИ для сотрудников и руководителей.</li>
+                            <li>Пишу правила безопасной работы с ИИ для редакции.</li>
+                            <li>Провожу очное обучение по IT-системам компании, создаю дистанционные курсы и SCORM-пакеты.</li>
+                            <li>Автоматизирую процессы обучения, пишу требования и ТЗ разработчикам.</li>
+                        </ul>
+                    </div>
+                </li>
+                <li class="timeline__item reveal">
+                    <div class="timeline__date">ранее</div>
+                    <div class="timeline__body">
+                        <h3>Интерфакс</h3>
+                        <p class="timeline__role">Обучение персонала и клиентов по IT-продуктам</p>
+                        <ul>
+                            <li>Провёл более 240 обучающих мероприятий.</li>
+                            <li>Разрабатывал дистанционные курсы в iSpring.</li>
+                            <li>Вёл аналитику обучения, писал ТЗ для разработчиков.</li>
+                        </ul>
+                    </div>
+                </li>
+            </ol>
+
+            <div class="skills reveal">
+                <h3>Инструменты и навыки</h3>
+                <ul class="chips">
+                    <li>Генеративный ИИ</li>
+                    <li>Промпт-инжиниринг</li>
+                    <li>ИИ-агенты</li>
+                    <li>ChatGPT</li>
+                    <li>Claude</li>
+                    <li>Claude Code</li>
+                    <li>MCP</li>
+                    <li>Python</li>
+                    <li>Telegram API</li>
+                    <li>Discord API</li>
+                    <li>Docker</li>
+                    <li>Git</li>
+                    <li>Obsidian</li>
+                    <li>SCORM</li>
+                    <li>iSpring</li>
+                    <li>Разработка ТЗ</li>
+                    <li>Оценка эффективности обучения</li>
                 </ul>
             </div>
         </div>
     </section>
 
-    <section class="about" id="about">
-        <h2>Обо мне</h2>
-        <div class="content">
-            <p><strong>Имя:</strong> Ринат</p>
-            <p><strong>Возраст:</strong> 33 года</p>
-            <p><strong>Образование:</strong> Высшее экономическое</p>
+    <!-- Образование -->
+    <section class="section section--alt" id="education">
+        <div class="container">
+            <div class="section__head reveal">
+                <p class="eyebrow">Образование и курсы</p>
+                <h2>Учусь сам, чтобы учить других</h2>
+            </div>
+            <div class="cards cards--3">
+                <article class="card spotlight reveal">
+                    <h3>Высшее экономическое</h3>
+                    <p>Основа для аналитики и понимания бизнес-процессов.</p>
+                </article>
+                <article class="card spotlight reveal">
+                    <h3>«Мастерская бизнес-тренера»</h3>
+                    <p>Обучение взрослых, цикл Колба, проведение тренингов.</p>
+                </article>
+                <article class="card spotlight reveal">
+                    <h3>Программирование</h3>
+                    <p>Школа 21; курсы Codecademy:
+                        <a href="https://www.codecademy.com/profiles/1936660184/certificates/65f0ff88f4fc58e0536b3b51648dff24" target="_blank" rel="noopener">C#</a>,
+                        <a href="https://www.codecademy.com/profiles/1936660184/certificates/042a4e5884e3eb6ea1f2a12be6abb851" target="_blank" rel="noopener">SQL</a>,
+                        <a href="https://www.codecademy.com/profiles/1936660184/certificates/a8ab218d5950c29861635cc0bf12fd13" target="_blank" rel="noopener">Git&nbsp;&amp;&nbsp;GitHub</a>.
+                    </p>
+                </article>
+            </div>
         </div>
     </section>
 
-    <section class="about" id="courses">
-        <h2>Курсы</h2>
-        <div class="content">
-            <ul>
-                <li>C# <a href="https://www.codecademy.com/profiles/1936660184/certificates/65f0ff88f4fc58e0536b3b51648dff24">(сертификат)</a></li>
-                <li>SQL <a href="https://www.codecademy.com/profiles/1936660184/certificates/042a4e5884e3eb6ea1f2a12be6abb851">(сертификат)</a></li>
-                <li>Git & GitHub <a href="https://www.codecademy.com/profiles/1936660184/certificates/a8ab218d5950c29861635cc0bf12fd13">(сертификат)</a></li>
-            </ul>
-        </div>
-    </section>
-
-    <section class="about" id="projects">
-        <h2>Мои проекты</h2>
-        <div class="content">
-            <ul>
-                <li><a href="https://github.com/ASKentr/Learning-projects">Консольный калькулятор (C#)</a></li>
-                <li><a href="https://github.com/ASKentr/Calculator-win-form">Калькулятор с UI (C#)</a></li>
-                <li><a href="https://github.com/ASKentr/askentr.github.io">Этот сайт (HTML и CSS)</a></li>
-                <li><a href="https://github.com/ASKentr/Parser">Парсер сайта (C#)</a></li>
-            </ul>
-        </div>
-    </section>
-
-    <section class="about" id="contacts">
-        <h2>Контакты</h2>
-        <div class="content">
-            <ul>
-                <li><strong>E-mail:</strong> askentr@gmail.com</li>
-                <li><strong>Telegram:</strong> @ASKentr</li>
-                <li><strong>WhatsApp/Phone:</strong> +79275088427</li>
-                <li><a href="https://hh.ru/resume/5f55b0a7ff0bb2af4e0039ed1f564c78624337"><strong>Моё резюме на headhunter</a></strong></li>
-            </ul>
-            <p>В настоящий момент работаю, но открыт к интересным предложениям!</p>
-            <p><a href="https://github.com/ASKentr" class="github-link">Мой профиль на GitHub</a></p>
+    <!-- Контакты -->
+    <section class="section contacts" id="contacts">
+        <div class="container">
+            <div class="contact-card spotlight reveal">
+                <div class="contact-card__text">
+                    <p class="eyebrow">Контакты</p>
+                    <h2>Давайте обсудим вашу задачу</h2>
+                    <p>Сейчас работаю, но открыт к интересным предложениям: внедрение ИИ, обучение команд, автоматизация процессов.</p>
+                </div>
+                <ul class="contact-list">
+                    <li>
+                        <a href="https://t.me/ASKentr" target="_blank" rel="noopener" class="contact-link">
+                            <span class="contact-link__label">Telegram</span>
+                            <span class="contact-link__value">@ASKentr</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="mailto:askentr@gmail.com" class="contact-link">
+                            <span class="contact-link__label">E-mail</span>
+                            <span class="contact-link__value">askentr@gmail.com</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://hh.ru/resume/75c9e748ff113522f00039ed1f586769555068" target="_blank" rel="noopener" class="contact-link">
+                            <span class="contact-link__label">hh.ru</span>
+                            <span class="contact-link__value">Внедрение ИИ и автоматизация</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://hh.ru/resume/5f55b0a7ff0bb2af4e0039ed1f564c78624337" target="_blank" rel="noopener" class="contact-link">
+                            <span class="contact-link__label">hh.ru</span>
+                            <span class="contact-link__value">Обучение и развитие персонала</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://github.com/ASKentr" target="_blank" rel="noopener" class="contact-link">
+                            <span class="contact-link__label">GitHub</span>
+                            <span class="contact-link__value">ASKentr</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
         </div>
     </section>
 </main>
 
-<!-- Кнопка "Наверх" -->
-<a href="#" class="back-to-top">↑ Наверх</a>
-
 <footer class="footer">
-    <div class="container">
-        <p>&copy; 2025 Ринат Абдулов. Все права защищены.</p>
+    <div class="container footer__inner">
+        <p>© <span id="year">2026</span> Ринат Абдулов</p>
+        <p class="footer__note">Сайт собран вместе с ИИ-ассистентом</p>
     </div>
 </footer>
 
-<script>
-    // Показываем кнопку "Наверх" при прокрутке
-    const backToTopButton = document.querySelector('.back-to-top');
-
-    window.addEventListener('scroll', () => {
-        if (window.scrollY > 300) {
-            backToTopButton.classList.add('visible');
-        } else {
-            backToTopButton.classList.remove('visible');
-        }
-    });
-</script>
+<script src="script.js" defer></script>
 </body>
 </html>

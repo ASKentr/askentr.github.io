@@ -115,7 +115,10 @@
 
     // ---------- Сменяющиеся слова в заголовке ----------
     const rotator = document.querySelector('.rotator');
-    const words = ['работу команд', 'редакции', 'обучение', 'процессы', 'медиа'];
+    // Слова задаются в data-words (у каждой языковой версии свои)
+    const words = rotator && rotator.dataset.words
+        ? rotator.dataset.words.split('|')
+        : ['работу команд', 'редакции', 'обучение', 'процессы', 'медиа'];
     if (rotator && !reducedMotion) {
         let i = 0;
         const OUT = 900, IN = 1100, PAUSE = 2200;
